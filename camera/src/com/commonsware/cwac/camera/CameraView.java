@@ -32,8 +32,10 @@ import android.view.OrientationEventListener;
 import android.view.Surface;
 import android.view.View;
 import android.view.ViewGroup;
-import java.io.IOException;
+
 import com.commonsware.cwac.camera.CameraHost.FailureReason;
+
+import java.io.IOException;
 
 public class CameraView extends ViewGroup implements AutoFocusCallback {
   static final String TAG="CWAC-Camera";
@@ -343,10 +345,10 @@ public class CameraView extends ViewGroup implements AutoFocusCallback {
                                               "Video recording supported only on API Level 11+");
     }
 
-    if (displayOrientation != 0 && displayOrientation != 180) {
-      throw new UnsupportedOperationException(
-                                              "Video recording supported only in landscape");
-    }
+//    if (displayOrientation != 0 && displayOrientation != 180) {
+//      throw new UnsupportedOperationException(
+//                                              "Video recording supported only in landscape");
+//    }
 
     Camera.Parameters pictureParams=camera.getParameters();
 
